@@ -28,6 +28,8 @@ function setup() {
 
   serial.list(); // list the serial ports
   serial.open(portName); // open a serial port
+  
+  textSize(20);
 }
 
 // get the list of ports:
@@ -74,30 +76,31 @@ function portClose() {
 function draw() {
   background(255,255,255);
   
+  
   // Displays the light level
   if(light > 80){ 
-    text("Niveau de luminosité : Très lumineux", 10, 50);
+    text("Niveau de luminosité : Très lumineux 🌞", 10, 50);
   } else if (light <= 80 && light > 60){
-    text("Niveau de luminosité : Lumineux", 10, 50);
+    text("Niveau de luminosité : Lumineux ☀️", 10, 50);
   } else if (light <= 60 && light > 40){
-    text("Niveau de luminosité : Moyennement lumineux", 10, 50);
+    text("Niveau de luminosité : Moyennement lumineux ⛅", 10, 50);
   } else if (light <= 40 && light > 20){
-    text("Niveau de luminosité : Sombre", 10, 50);
+    text("Niveau de luminosité : Sombre 🌘", 10, 50);
   } else if (light <= 20){
-    text("Niveau de luminosité : Très sombre", 10, 50);
+    text("Niveau de luminosité : Très sombre 🌚", 10, 50);
   }
 
   // Displays the humidity level
   if(humidity > 80){
-    text("Niveau d'humidité : Très sec", 10, 100);
+    text("Niveau d'humidité : Très sec 🏜️", 10, 100);
   } else if (humidity <= 80 && humidity > 60){
-    text("Niveau d'humidité : Sec", 10, 100);
+    text("Niveau d'humidité : Sec 🌵", 10, 100);
   } else if (humidity <= 60 && humidity > 40){
-    text("Niveau d'humidité : Moyennement humide", 10, 100);
+    text("Niveau d'humidité : Moyennement humide 🌱", 10, 100);
   } else if (humidity <= 40 && humidity > 20){
-    text("Niveau d'humidité : Humide", 10, 100);
+    text("Niveau d'humidité : Humide 💧", 10, 100);
   } else if (humidity <= 20){
-    text("Niveau d'humidité : Très humide", 10, 100);
+    text("Niveau d'humidité : Très humide 🌧️", 10, 100);
   }
   
 }
